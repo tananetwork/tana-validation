@@ -1,0 +1,24 @@
+[package]
+name = "tana-validation"
+version = "0.1.0"
+edition = "2021"
+authors = ["Tana Network"]
+description = "Shared validation logic for Tana smart contracts with WASM support"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/tananetwork/tana-validation"
+keywords = ["tana", "blockchain", "validation", "wasm"]
+categories = ["wasm", "development-tools"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3"
+
+[profile.release]
+# Optimize for size when building WASM
+opt-level = "s"
+lto = true
