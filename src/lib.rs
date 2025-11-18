@@ -51,6 +51,7 @@ use wasm_bindgen::prelude::*;
 /// // │
 /// // = help: Available modules: tana/core, tana/kv, tana/block
 /// // │
+/// // └─
 /// ```
 #[wasm_bindgen]
 pub fn format_validation_error(
@@ -100,7 +101,8 @@ fn format_error_impl(
             │ {}{} {}\n\
         │\n\
         = help: {}\n\
-        │\n",
+        │\n\
+        └─\n",
         error_kind,
         file_path,
         line_num,
